@@ -1,15 +1,21 @@
 # solana-web3
 
-To install dependencies:
+useful script to learn and test solana web3
+
+0. understandable
+1. run independent
+2. copy to reuse
+
+
+## how to use
+1. To install dependencies:
 
 ```bash
 bun install
 ```
 
-To run:
+2. To run:
 
 ```bash
-bun run index.ts
+bun run ***.ts
 ```
-
-This project was created using `bun init` in bun v1.1.8. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
