@@ -14,7 +14,12 @@ useful script to learn and test solana web3
 bun install
 ```
 
-2. To run:
+2. Set Env
+```bash
+cp env .env
+```
+
+3. To run:
 
 ```bash
 bun run ***.ts
