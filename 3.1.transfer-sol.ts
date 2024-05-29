@@ -1,7 +1,7 @@
 import web3, { Connection } from "@solana/web3.js";
 import base58 from "bs58";
 
-const connection = new Connection("https://api.devnet.solana.com");
+const connection = new Connection(process.env.RPC);
 const fromWallet = web3.Keypair.fromSecretKey(
   base58.decode(process.env.PRIVATE_KEY),
 );
@@ -34,5 +34,5 @@ console.log("sim logs", logs);
 const signature = await connection.sendTransaction(transaction, [fromWallet]);
 console.log("signature", signature);
 
-let transaction = await connection.getTransaction(signature);
-console.log("transaction", transaction);
+let tx = await connection.getTransaction(signature);
+console.log("transaction", tx);

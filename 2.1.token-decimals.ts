@@ -1,6 +1,6 @@
 import { Connection, PublicKey } from "@solana/web3.js";
 
-const connection = new Connection("https://api.mainnet-beta.solana.com");
+const connection = new Connection(process.env.RPC);
 const mintAddress = new PublicKey(
   "So11111111111111111111111111111111111111112",
 );

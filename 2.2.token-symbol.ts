@@ -3,7 +3,7 @@ import { Metaplex } from "@metaplex-foundation/js";
 import meta from "@metaplex-foundation/mpl-token-metadata";
 import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 
-const connection = new Connection("https://api.mainnet-beta.solana.com");
+const connection = new Connection(process.env.RPC);
 const mintAddress = new PublicKey(
   "So11111111111111111111111111111111111111112",
 );
