@@ -1,7 +1,8 @@
-# solana-web3
+# useful solana-web3 script
 
-solana web3 script for copy anytime
-可复制 solana web3脚本
+`copy and paste` Or `run in shell`
+
+常用solana web3脚本(可复用或直接运行)
 
 1. account manage & balance  -  帐号管理和余额查询
 2. token info & balance - token信息和余额查询
