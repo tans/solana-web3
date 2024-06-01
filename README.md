@@ -19,6 +19,16 @@ bun install
 cp env .env
 ```
 
+
+```
+# 私钥，用于发送交易
+PRIVATE_KEY=
+# 另一个钱包公钥，接收交易
+PUBLIC_KEY=92U3aM8kRqihutqFWNDGxmWXxMHDrnAyFEMYXcKmvKcD
+# 开发或测试网rpc
+RPC=https://api.devnet.solana.com
+```
+
 3. To run:
 
 ```bash
