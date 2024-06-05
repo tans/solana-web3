@@ -1,3 +1,4 @@
 PRIVATE_KEY=
 PUBLIC_KEY=92U3aM8kRqihutqFWNDGxmWXxMHDrnAyFEMYXcKmvKcD
 RPC=https://api.devnet.solana.com
+#RPC=https://api.mainnet-beta.solana.com

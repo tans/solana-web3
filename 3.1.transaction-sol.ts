@@ -18,6 +18,17 @@ console.log("from wallet", fromWallet.publicKey.toBase58());
 
 const toPublicKey = new web3.PublicKey(process.env.PUBLIC_KEY);
 
+let oldBalance = await connection.getBalance(fromWallet.publicKey);
+console.log("old balance", oldBalance);
+
+const modifyComputeUnits = ComputeBudgetProgram.setComputeUnitLimit({
+  units: 1000000,
+});
+
+const addPriorityFee = ComputeBudgetProgram.setComputeUnitPrice({
+  microLamports: 1,
+});
+
 const transaction = new web3.Transaction().add(
   web3.SystemProgram.transfer({
     fromPubkey: fromWallet.publicKey,
@@ -34,5 +45,17 @@ console.log("sim logs", logs);
 const signature = await connection.sendTransaction(transaction, [fromWallet]);
 console.log("signature", signature);
 
-let tx = await connection.getTransaction(signature);
-console.log("transaction", tx);
+await connection.confirmTransaction(signature, "confirmed");
+// let tx = await connection.getTransaction(signature);
+// console.log("transaction", tx);
+
+let newBalance = await connection.getBalance(fromWallet.publicKey);
+console.log("new balance", newBalance);
+
+await Bun.sleep(1000);
+newBalance = await connection.getBalance(fromWallet.publicKey);
+console.log("new balance", newBalance);
+
+await Bun.sleep(1000);
+newBalance = await connection.getBalance(fromWallet.publicKey);
+console.log("new balance", newBalance);
